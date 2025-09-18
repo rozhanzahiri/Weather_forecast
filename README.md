@@ -1,5 +1,5 @@
 # Weather_forecast
-- [Demo Project](https://rozhanzahiri.github.io/Music_player/)
+- [Demo Project](https://rozhanzahiri.github.io/Weather_forecast/)
 
 - Developed by Rozhan Zahiri
 
