@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast</title>
+    <link rel="stylesheet" href="staylesheet/output.css">
+    <link rel="stylesheet" href="staylesheet/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+
+<body>
+    <main class="row  h-[100vh] bg-[#0b131e]  *:my-auto *:mx-auto *:h-[96%] *:rounded-2xl">
+        <!-- search for weather -->
+        <div class="w-[70%]   relative">
+            <!-- search for cities -->
+            <input id="inpcity" type="text" placeholder="search for cities"
+                class="w-full h-[10%] text-white text-2xl pl-5 bg-[#202b3b] rounded-2xl">
+            <i id="search" class=" icon-search text-2xl  absolute top-5 right-5 cursor-pointer"></i>
+            <!-- search for cities -->
+            <!-- search for weather -->
+            <!-- temperature -->
+            <div class="w-full h-[30%]  flex *:h-full ">
+                <!-- local time -->
+                <div class="w-[33%] md:w-[40%]  *:mx-auto *:pl-[10%] *:md:pl-[30%]">
+                    <h2 id="city" class="mt-[55%] text-[16px] pb-3 md:mt-[18%] md:text-4xl">City</h2>
+                    <div class="line w-[90%] mx-auto"></div>
+                    <p id="localtime" class="mt-4 text-[16px] md:text-2xl">Localtime</p>
+                </div>
+                <!-- local time -->
+                <!-- Day temperature -->
+                <div class="w-[33%] md:w-[40%] *:w-full *:h-1/2 lg:flex *:lg:w-1/2 *:lg:h-full ">
+                    <!-- temperature -->
+                    <div class="*:mx-auto ">
+                        <h2 class="pl-[10%] lg:pl-[10%] mt-[55%] text-[14px] pb-3 md:mt-[18%] md:text-3xl lg:mt-[38%]">
+                            Temperature</h2>
+                        <div class="line w-[90%] mx-auto"></div>
+                        <p id="temperature" class="pl-[27%] lg:pl-[35%] mt-3 text-[16px] lg:text-2xl">30.1</p>
+                    </div>
+                    <!-- temperature -->
+                    <!-- feels like -->
+                    <div class="*:mx-auto hidden lg:block">
+                        <h2 class=" mt-[20%] pl-6 lg:pl-10 pb-3 md:text-3xl lg:mt-[38%]">Feels like</h2>
+                        <div class="line w-[90%] mx-auto"></div>
+                        <p id="feels_like" class=" md:pl-[35%] mt-2 md:text-2xl">30.1</p>
+                    </div>
+                    <!-- feels like -->
+                </div>
+                <!-- Day temperature -->
+
+                <!-- weather icon -->
+                <div class="w-[33%] md:w-[20%] flex justify-center items-center ">
+                    <figure class="w-[90%] h-full *:w-full">
+                        <img id="icon" class="h-[70%]" src="animated/day.svg" alt="">
+                        <figcaption id="condition"
+                            class="h-[20%] mt-[-18%] lg:mt-[-10%] text-center text-[18px] md:text-2xl">sunny
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <!-- weather icon -->
+            </div>
+            <!-- temperature -->
+
+            <!-- sunrise sunset.... -->
+            <div class="w-full h-[40%] bg-[#202b3b] rounded-2xl flex *:h-full ">
+                <!-- sunrise sunset -->
+                <div class="w-1/3 lg:w-2/8 flex justify-center items-center">
+                    <div class="w-[70%] h-[70%] *:text-center *:my-3 *:lg:text-2xl ">
+                        <h2>Sunrise</h2>
+                        <p id="Sunrise">6:30 PM</p>
+                        <div class="line w-[90%] mx-auto"></div>
+                        <h2>Sunset</h2>
+                        <p id="Sunset">6:30 PM</p>
+                    </div>
+                </div>
+                <!-- sunrise sunset -->
+                <!-- Moonrise Moonset -->
+                <div class="w-1/3 lg:w-2/8 flex justify-center items-center">
+                    <div class="w-[70%] h-[70%] *:text-center *:my-3 *:lg:text-2xl">
+                        <h2>Moonrise</h2>
+                        <p id="Moonrise">6:30 PM</p>
+                        <div class="line w-[90%] mx-auto"></div>
+                        <h2>Moonset</h2>
+                        <p id="Moonset">6:30 PM</p>
+                    </div>
+                </div>
+                <!-- Moonrise Moonset -->
+                <!-- Humidity Air Pressure (mb) uv -->
+                <div class="w-1/3 lg:w-4/8 *:w-full *:h-1/3 lg:flex *:lg:w-1/3 *:lg:h-full ">
+                    <!-- Humidity -->
+                    <div class="flex justify-center items-center">
+                        <div class="w-[70%] h-[70%] *:text-center *:lg:my-3 *:text-[13px] *:lg:text-2xl">
+                            <h2 class="pt-3.5 lg:pt-10">Humidity(%)</h2>
+                            <div class="line w-[90%] mx-auto"></div>
+                            <p id="Humidity">39</p>
+                        </div>
+                    </div>
+                    <!-- Humidity -->
+                    <!-- Air Pressure (mb) -->
+                    <div class="flex justify-center items-center">
+                        <div class="w-[70%] h-[70%] *:text-center *:lg:my-3 *:text-[13px] *:lg:text-2xl">
+                            <h2 class="lg:pt-10">Air Pressure</h2>
+                            <div class="line w-[90%] mx-auto"></div>
+                            <p id="Air_Pressure">39</p>
+                        </div>
+                    </div>
+                    <!-- Air Pressure (mb) -->
+                    <!-- Uv -->
+                    <div class="flex justify-center items-center">
+                        <div class="w-[70%] h-[70%] *:text-center *:lg:my-3 *:text-[13px] *:lg:text-2xl">
+                            <h2 class="lg:pt-10">UV</h2>
+                            <div class="line w-[90%] mx-auto"></div>
+                            <p id="Uv">39</p>
+                        </div>
+                    </div>
+                    <!-- Uv -->
+                </div>
+                <!-- Humidity Air Pressure (mb) uv -->
+            </div>
+            <!-- sunrise sunset.... -->
+
+            <!-- footer -->
+            <footer
+                class="w-full h-[20%] md:flex *:w-full *:h-1/4 *:md:w-1/4 *:md:h-full *:pl-4 *:text-[18px] *:lg:text-2xl *:pt-1.5 *:md:pt-15 ">
+                <div>Coded by Rozhan Zahiri</div>
+                <div><a href="https://github.com/rozhanzahiri"><i class=" icon-github-circled-alt2  "></i> My github</a>
+                </div>
+                <div><a href="https://www.instagram.com/rozhanzahiri_web/"><i class=" icon-instagram  "></i> My
+                        instagram</a></div>
+                <div><a href="https://www.linkedin.com/in/rozhan-zahiri-990859363/"><i
+                            class="icon-linkedin-squared "></i> My linkedin</a></div>
+            </footer>
+            <!-- footer -->
+        </div>
+        <!-- 7 Days Forecast -->
+        <section id="forecast" class=" w-[26%] bg-[#202b3b]   *:w-full *:h-1/7">
+            <!-- <div class="*:w-full *:h-1/2 lg:flex *:lg:w-1/4 *:lg:h-full *:text-center ">
+                <div class="pt-2 lg:pt-0 flex items-center justify-center"> 2025-09-18 21:24</div>
+                <div class="line w-[90%] mx-auto lg:hidden mt-1.5"></div>
+                <div class=" hidden lg:flex items-center justify-center"><img src="animated/thunder.svg" alt=""></div>
+                <div class=" hidden lg:flex items-center justify-center">rainy</div>
+                <div class="flex items-center justify-center">35</div>
+            </div> -->
+        </section>
+        <!-- 7 Days Forecast -->
+    </main>
+</body>
+<script>
+    const inpcity = document.getElementById('inpcity')
+    const search = document.getElementById('search')
+    const localtime = document.getElementById('localtime')
+    const city = document.getElementById('city')
+    const temperature = document.getElementById('temperature')
+    const feels_like = document.getElementById('feels_like')
+    const condition = document.getElementById('condition')
+    const icon = document.getElementById('icon')
+    const Sunrise = document.getElementById('Sunrise')
+    const Sunset = document.getElementById('Sunset')
+    const Moonrise = document.getElementById('Moonrise')
+    const Moonset = document.getElementById('Moonset')
+    const Humidity = document.getElementById('Humidity')
+    const Air_Pressure = document.getElementById('Air_Pressure')
+    const Uv = document.getElementById('Uv')
+    const forecast = document.getElementById('forecast')
+    let tk = 'bd08ec9af0e9453a8b9182654251709'
+    get_weather('tehran')
+    search.addEventListener('click', (val) => {
+        let temp = inpcity.value
+        get_weather(temp)
+    })
+    function get_weather(temp) {
+        console.log(temp);
+        
+        let city1 = temp
+        fetch('https://api.weatherapi.com/v1/forecast.json?key=' + tk + '&q=' + city1 + '&days=7&aqi=yes&alerts=yes')
+
+            .then(res => {
+                if (res.ok) return res.json()
+                throw new Error()
+            })
+
+            .then(data => {
+                city.innerHTML = data.location.name
+                localtime.innerHTML = data.location.localtime
+                temperature.innerHTML = data.current.temp_c + ' C'
+                feels_like.innerHTML = data.current.feelslike_c + ' C'
+                icon.src = choose_icon(data.current.condition.text)
+                condition.innerHTML = data.current.condition.text
+                Sunrise.innerHTML = data.forecast.forecastday[0].astro.sunrise
+                Sunset.innerHTML = data.forecast.forecastday[0].astro.sunset
+                Moonrise.innerHTML = data.forecast.forecastday[0].astro.moonrise
+                Moonset.innerHTML = data.forecast.forecastday[0].astro.moonset
+                Humidity.innerHTML = data.current.humidity
+                Air_Pressure.innerHTML = data.current.pressure_mb
+                Uv.innerHTML = data.current.uv
+                forecast.innerHTML = '';
+                data.forecast.forecastday.forEach((val) => {
+                    let div = document.createElement('div')
+                    div.classList.add('week_forecast')
+                    div.innerHTML = `
+                   <div class="pt-2 lg:pt-0 flex items-center justify-center"> ${val.date}</div>
+                    <div class="line w-[90%] mx-auto lg:hidden mt-1.5"></div>
+                    <div class=" hidden lg:flex items-center justify-center">
+                        <img src="${choose_icon(val.day.condition.text)}" alt=""></div>
+                    <div class=" hidden lg:flex items-center justify-center">${val.day.condition.text}</div>
+                    <div class="flex items-center justify-center">${val.day.avgtemp_c} C</div>
+                `
+                    forecast.appendChild(div);
+                    console.log(val.day.condition.text);
+                    
+                })
+            })
+            
+            
+            .catch((err) => console.log(err))
+
+    }
+
+
+    function choose_icon(text) {
+        console.log(text);
+
+        switch (text) {
+            case 'rainy': return 'animated/rainy-3.svg'; break;
+            case 'Patchy rain nearby': return 'animated/rainy-3.svg'; break;
+            case 'sunny': return 'animated/day.svg'; break;
+            case 'clear': return 'animated/day.svg'; break;
+            case 'cloudy': return 'animated/cloudy-day-3.svg'; break;
+            case 'Partly cloudy': return 'animated/cloudy-day-3.svg'; break;
+            case 'Partly Cloudy': return 'animated/cloudy-day-3.svg'; break;
+            case 'snowy': return 'animated/snowy-6.svg'; break;
+            case 'weather': return 'animated/weather.svg'; break;
+            case 'thunder': return 'animated/thunder.svg'; break;
+            case 'Patchy light rain with thunder': return 'animated/thunder.svg'; break;
+            default: return 'animated/day.svg'; break;
+        }
+    }
+</script>
+
+</html>

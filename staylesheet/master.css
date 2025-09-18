@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+@layer base{
+    .row{
+        @apply flex w-full flex-wrap
+    }
+}
+
+@layer components{
+
+}
+
+@layer utilities{
+    .week_forecast{
+        @apply *:w-full *:h-1/2 lg:flex *:lg:w-1/4 *:lg:h-full 
+    }
+}
+
+body{
+    font-family: "Roboto Flex", sans-serif;
+    color: white;
+}
+
+.line {
+    height: 1px;
+    /* width: 300px; */
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
